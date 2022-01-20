@@ -6,7 +6,7 @@ const cheerio = require('cheerio');
 
 
 router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'home.hbs'))
+  
   const data = {
     name: "Andreas",
     tel: "asdf"
