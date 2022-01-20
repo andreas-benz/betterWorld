@@ -1,0 +1,26 @@
+{
+  "name": "betterworld",
+  "version": "1.0.0",
+  "description": "A public list of ideas how to make the world a better place",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreas-benz/betterWorld.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreas-benz/betterWorld/issues"
+  },
+  "homepage": "https://github.com/andreas-benz/betterWorld#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
