@@ -7,6 +7,21 @@ function getAllTasks (database = conn) {
       .select()   
   }
 
+function getAllTasksThatAreNotMine (uid, database = conn) {
+  return database('tasks')
+    .select('t_id', 'created_by', "name")
+      .join('user_task', 't_id', 'user_task.tid')
+      .join('users', 'uid', 'users.u_id')
+      .whereNot('tasks.created_by', uid)
+      .whereNot('user_task.uid', uid)
+}
+
+function tasksIhaveCreated (uid, database = conn) {
+  return database('tasks')
+    .select()
+      .where("created_by", uid)
+}
+
 function getOneTask(id, database = conn) {
    return database('tasks')
     .select()
@@ -50,5 +65,7 @@ module.exports = {
  addTask,
  updateTask,
  deleteTask,
- destroyConnection
+ destroyConnection,
+ getAllTasksThatAreNotMine,
+ tasksIhaveCreated
 }

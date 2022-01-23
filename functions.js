@@ -19,6 +19,19 @@ function getAllTasks () {
     })
 }
 
+function getAllTasksThatAreNotMine (id) {
+  return db.getAllTasksThatAreNotMine(id)
+    .then((tasks) => {
+      console.log(tasks)
+    })
+    .catch(() => {
+      db.destroyConnection()
+    })
+    .finally(() => {
+      db.destroyConnection()
+    })
+}
+
 function getTitleOfAllTasks () {
   return db.getAllTasks()
     .then((tasks) => {
@@ -107,12 +120,28 @@ function deleteTask (id) {
     })
 }
 
+function tasksIhaveCreated (id) {
+  return db.tasksIhaveCreated (id)
+    .then((tasks) => {
+      console.log(tasks)
+    })
+    .catch(() => {
+      db.destroyConnection()
+    })
+    .finally(() => {
+      db.destroyConnection()
+    })
+}
+
+
 
 module.exports = {
   getAllTasks,
   getTitleOfAllTasks,
+  getAllTasksThatAreNotMine,
   getOneTask,
   addTask,
   updateTask,
   deleteTask,
+  tasksIhaveCreated,
 }

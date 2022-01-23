@@ -1,7 +1,15 @@
 <h1>Build a better World together</h1>
 
-<div class="container">
+{{!-- <div class="container">
   <p>{{name}}</p>
   <p>{{tel}}</p>
+</div> --}}
+
+<div class="container">
+ {{#each tasks}}
+  <p>{{title}}</p>
+  <p>{{description}}</p>
+  <p>{{created_by}}</p>
+  {{/each}}
 </div>
 
