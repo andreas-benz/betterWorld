@@ -1,0 +1,46 @@
+<div class="titleCont">
+    <h1>Mahi Edit View</h1>
+    <p class= "manage"> Edit your mahi below: </p>
+</div>
+
+<p > {{task.t_id}}</p>
+
+<div>
+    <form class="form" action="/{{task.t_id}}/edit" method="post">
+     <div class= "listShape">
+      <div class="taskList">
+
+        <label for="title">Task Name: 
+          <input type="text" name="title" value="{{task.title}}">
+        </label>
+
+        <br>
+
+        <label for="description">Description:
+          <input type="text" name="description" value="{{task.description}}">
+        </label>
+
+        <br>
+
+        <label for="created_by">Owner:</label>
+          <select name="created_by" id="created_by">
+            {{#each users}}
+            <option value="{{u_id}}">{{name}}</option>
+            {{/each}}
+          </select>
+
+        {{!-- <label for="by">Owner:</label>
+          <select name="by" id="by">
+            <option value="10001">Andreas</option>
+            <option value="10004">Courtney</option>
+            <option value="10005">JP</option>
+            <option value="10006">Sam</option>
+          </select> --}}
+
+        <input type="submit" name="" value="Submit">
+
+        </div>
+    </form>
+
+    </div>
+</div>

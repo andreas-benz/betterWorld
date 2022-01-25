@@ -1,3 +1,94 @@
+body{
+  background-color:paleturquoise;
+  border: pink;
+  border-style:dashed;
+  border-width: 8px;
+}
+
 h1 {
-  background-color: red;
+  font-size: 100px;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;  
+  text-align: center;
+
+}
+
+h2 {
+  font-size: 60px;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  text-align: center;
+  font-weight: lighter;
+}
+.listShape {
+  background: pink;
+  justify-content: center;
+  margin: auto;
+  padding: 70px 10px 70px 10px;
+  width: 60%;
+}
+
+table {
+  background: pink;
+  justify-content: center;
+  margin: auto;
+  padding: 70px 10px 70px 10px;
+  width: 60%;
+}
+
+.listLayout {
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+h4 {
+  font-size: small;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  text-align: center;
+}
+
+.button {
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  background: pink;
+  justify-content: center;
+  margin: auto;
+  width: 60%;
+  display: flex;
+  padding: 10px 10px 10px 10px;
+}
+
+.button:hover {
+  background-color: lightcoral;
+}
+
+.manage{
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+
+}
+
+li {
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+
+}
+.taskList {
+  text-align: center;
+}
+.footer {
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  margin-top: 12%;
+}
+.tableHead {
+  font-weight: bold;
 }

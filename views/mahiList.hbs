@@ -1,0 +1,46 @@
+<div class="titleCont">
+    <h1>My Mahi</h1>
+    <p class= "manage"> Manage your mahi below:</p>
+</div>
+
+<table>
+   <tr class="tableHead">
+      <td>t_id</td>
+     <td>Title</td>
+     <td>Description</td>
+     <td>Created by</td>
+     {{!-- <td>Due</td>
+     <td>Status</td> --}}
+  </tr>
+
+  {{#each tasks}}
+  <tr>
+    <td>{{t_id}}</td>
+    <td>{{title}}</td>
+    <td>{{description}}</td>
+    <td>{{name}}</td>
+    {{!-- <td>{{due}}</td>
+    <td>{{status}}</td> --}}
+    <td>
+      <a href="/{{t_id}}/edit">
+          <button class="button">Edit</button>
+        </a></td>
+    <td>
+      {{!-- <a href="/{{id}}/delete">
+          <button class="button">delete</button>
+        </a></td> --}}
+      <form class="form" action="/{{t_id}}/delete" method="post">
+        <input class="button" type="submit" name="delete" value="delete">
+      </form>
+  </tr>
+    </td>
+  {{/each}}
+
+</table>
+
+<br>
+
+<form  action="/add" method="post">
+  <input class="button" type="submit" name="" value="new Task">
+</form>
+
