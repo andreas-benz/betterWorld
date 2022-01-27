@@ -35,6 +35,7 @@ router.get('/:t_id/edit', (req, res) => {
     func.getAllUsers()
       .then((users) => {
         viewdata.users = users
+        console.log(viewdata)
         res.render('mahiEdit', viewdata)
       })
    })
